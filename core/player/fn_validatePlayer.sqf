@@ -1,7 +1,8 @@
-if (isServer || isDedicated) then {
+if (isServer) then {
 	private ["_unit"];
 
 	_unit = _this;
+	[_unit] call f_fnc_getLoadout; // Set the loadout in the unit's namespace
 	_checkID = [_unit, "players", "id", "STRING"] call f_fnc_dbRead;
 
 	if (isNil "_checkID" || _checkID == "") then {
@@ -12,5 +13,6 @@ if (isServer || isDedicated) then {
 		_unit call f_fnc_loadPlayer;
 	};
 } else {
+	[_this] call f_fnc_getLoadout; // Set the loadout in the unit's namespace
 	[_this, "f_fnc_validatePlayer", false, false, true] call BIS_fnc_MP;
 };

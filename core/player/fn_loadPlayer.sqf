@@ -1,4 +1,4 @@
-if (isServer) then {
+if (isServer || isDedicated) then {
 	private ["_unit"];
 
 	_unit = _this;
