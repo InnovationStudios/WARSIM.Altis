@@ -7,7 +7,7 @@ class common
 
 	class server
 	{
-		addon = "inidbi"; // Name of the @iniDBI addon folder, without the @ symbol
+		addon = "iniDBI_WARSIM"; // Name of the @iniDBI addon folder, without the @ symbol
 		database = "WARSIM.Altis"; // Name of the database folder inside \@iniDBI\db\ (used for separating databases per map)
 		class files
 		{
