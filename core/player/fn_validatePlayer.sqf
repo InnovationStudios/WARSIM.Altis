@@ -3,13 +3,11 @@ if (isServer) then {
 
 	_unit = _this;
 	[_unit] call f_fnc_getLoadout; // Set the loadout in the unit's namespace
-	_checkID = [_unit, "players", "id", "STRING"] call f_fnc_dbRead;
+	_exists = _unit call f_fnc_playerExists;
 
-	if (isNil "_checkID" || _checkID == "") then {
-		// Player record doesn't exist, proceed to create new one
+	if (!_exists) then {
 		_unit call f_fnc_createPlayer;
 	} else {
-		// Player record exists, proceed to load it
 		_unit call f_fnc_loadPlayer;
 	};
 } else {

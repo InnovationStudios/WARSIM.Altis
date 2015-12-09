@@ -28,6 +28,7 @@
 						_winningSide = _winner select 0;
 						_winningCount = _winner select 1;
 						_alpha = (_winningCount / 100) * 10;
+						if (_alpha < 0.5) then {_alpha = 0.5};
 						_block setMarkerAlpha _alpha;
 					};
 				} else {
@@ -37,6 +38,7 @@
 						_winningSide = _winner select 0;
 						_winningCount = _winner select 1;
 						_alpha = (_winningCount / 100) * 10;
+						if (_alpha < 0.5) then {_alpha = 0.5};
 						_text setMarkerAlpha _alpha;
 						switch (_winningSide) do {
 							case (west): { _text setMarkerColor "ColorWEST"; };

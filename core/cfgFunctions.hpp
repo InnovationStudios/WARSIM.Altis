@@ -18,6 +18,9 @@ class CfgFunctions
 			class spawnGridHandler {};
 			class drawStaticBases {};
 			class heldBy {};
+			class playerExists {};
+			class buildVarsFromConfig {};
+			class log {};
 		};
 		class player
 		{
