@@ -20,7 +20,6 @@ class CfgFunctions
 			class heldBy {};
 			class playerExists {};
 			class buildVarsFromConfig {};
-			class log {};
 		};
 		class player
 		{

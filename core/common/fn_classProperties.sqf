@@ -14,9 +14,7 @@ _output = [];
 if (!isClass _config) exitWith {};
 
 {
-	if (isArray _x || isNumber _x || isText _x) then {
-		_output pushBack [(configName _x), (_x call BIS_fnc_getCfgData)];
-	};
+	_output pushBack [(configName _x), (_x call BIS_fnc_getCfgData)];
 } forEach (configProperties [_config]);
 
 _output

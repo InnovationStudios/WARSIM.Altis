@@ -20,8 +20,6 @@ if (isServer || isDedicated) then {
 	_unit setVariable ["PERS_DIRECTION", (getDir _unit), true];
 	_unit setVariable ["PERS_LOADOUT", _loadout, true];
 	_unit setVariable ["PERS_XP", _startXP, true];
-
-	"created player" call f_fnc_log;
 } else {
 	[_this, "f_fnc_createPlayer", false, false, true] call BIS_fnc_MP;
 };

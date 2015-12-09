@@ -14,11 +14,9 @@ if (isServer) then {
 
 	if (isNil "_checkID" || _checkID == "") then {
 		_unit setVariable ["DIAG_EXISTS", false, true];
-		"player doesn't exist" call f_fnc_log;
 		_ret = false;
 	} else {
 		_unit setVariable ["DIAG_EXISTS", true, true];
-		"player exists" call f_fnc_log;
 		_ret = true;
 	};
 

@@ -18,8 +18,6 @@ if (isServer || isDedicated) then {
 	[_unit, _loadout] call f_fnc_setLoadout;
 	_unit setPos (call compile _position);
 	_unit setDir _direction;
-
-	"loaded player" call f_fnc_log;
 } else {
 	[_this, "f_fnc_loadPlayer", false, false, true] call BIS_fnc_MP;
 };
