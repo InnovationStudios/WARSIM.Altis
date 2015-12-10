@@ -30,6 +30,12 @@
 						_alpha = (_winningCount / 100) * 10;
 						if (_alpha < 0.5) then {_alpha = 0.5};
 						_block setMarkerAlpha _alpha;
+
+						// Handle database side
+						_index = format ["Grid_%1_%2", (_pos2 select 0), (_pos2 select 1)];
+						[_index, "grid", "position", _pos2] call f_fnc_dbWriteGeneric;
+						[_index, "grid", "side", str _winningSide] call f_fnc_dbWriteGeneric;
+						[_index, "grid", "alpha", _alpha] call f_fnc_dbWriteGeneric;
 					};
 				} else {
 					// Marker found
@@ -45,6 +51,12 @@
 							case (east): { _text setMarkerColor "ColorEAST"; };
 							case (resistance): { _text setMarkerColor "ColorGUER"; };
 						};
+
+						// Handle database side
+						_index = format ["Grid_%1_%2", (_pos2 select 0), (_pos2 select 1)];
+						[_index, "grid", "position", _pos2] call f_fnc_dbWriteGeneric;
+						[_index, "grid", "side", str _winningSide] call f_fnc_dbWriteGeneric;
+						[_index, "grid", "alpha", _alpha] call f_fnc_dbWriteGeneric;
 					};
 				};
 			};

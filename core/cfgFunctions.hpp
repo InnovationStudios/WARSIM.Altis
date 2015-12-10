@@ -14,11 +14,13 @@ class CfgFunctions
 			class validateDatabase {};
 			class dbRead {};
 			class dbWrite {};
+			class dbWriteGeneric {};
 			class createGridMarkers {};
 			class spawnGridHandler {};
 			class drawStaticBases {};
 			class heldBy {};
 			class playerExists {};
+			class gridExists {};
 			class buildVarsFromConfig {};
 		};
 

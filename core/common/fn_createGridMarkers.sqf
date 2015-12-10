@@ -25,12 +25,18 @@ for [{_r = _radius}, {_r > 0}, {_r = _r - 100}] do {
 			_pos = [_center, _r, _i] call BIS_fnc_relPos;
 			_px = floor ((_pos select 0) / 100);
 			_py = floor ((_pos select 1) / 100);
+			_pxysq = [(_px * 100) + 50, (_py * 100) + 50, 0];
 			_text = format ["Grid_%1_%2", _px, _py];
-			_block = createMarker[_text, [(_px * 100) + 50, (_py * 100) + 50, 0]];
+			_block = createMarker[_text, _pxysq];
 			_block setMarkerShape "RECTANGLE";
 			_block setMarkerSize [50, 50];
 			_block setMarkerColor (format ["Color%1", _side]);
-			_block setMarkerAlpha 0.5;
+			_block setMarkerAlpha 1;
+
+			_index = format ["Grid_%1_%2", (_pxysq select 0), (_pxysq select 1)];
+			[_index, "grid", "position", _pxysq] call f_fnc_dbWriteGeneric;
+			[_index, "grid", "side", str _side] call f_fnc_dbWriteGeneric;
+			[_index, "grid", "alpha", 1] call f_fnc_dbWriteGeneric;
 		};
 	};
 };
