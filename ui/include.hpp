@@ -3,3 +3,6 @@
 
 // Roles
 #include "roles\dialog.hpp"
+
+// Armory
+#include "armory\dialog.hpp"
