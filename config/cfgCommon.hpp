@@ -35,4 +35,15 @@ class common
 		// Refresh Rate - update territory grid every X seconds (lower = poor FPS)
 		refreshRate = 5;
 	};
+
+	class rally
+	{
+		// Time it takes (in seconds) to deploy a rally point
+		deployTime = 10;
+
+		// Objects to spawn for rally points (separated by side)
+		objectClassnames_WEST[] = {"Land_TentDome_F","Flag_NATO_F"};
+		objectClassnames_EAST[] = {"Land_TentDome_F","Flag_CSAT_F"};
+		objectClassnames_GUER[] = {"Land_TentDome_F","Flag_AAF_F"};
+	};
 };
