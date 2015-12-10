@@ -28,6 +28,9 @@ if (isServer || isDedicated) then {
 	} forEach _objectClassnames;
 
 	_unit setVariable ["RALLY_COMPLETE", false, true];
+
+	_territoryRadius = (missionConfigFile >> "CfgWarsim" >> "common" >> "rally" >> "territoryRadius") call BIS_fnc_getCfgData;
+	[_pos, _territoryRadius, (side _unit)] call f_fnc_createGridMarkers;
 } else {
 	_this remoteExec ["f_fnc_createRallyPoint", 2];
 };

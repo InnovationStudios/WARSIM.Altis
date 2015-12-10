@@ -5,8 +5,10 @@
 		0: ARRAY - position object
 		1: SCALAR - radius
 		2: STRING - side for the marker colour (west, east, guer, unknown)
-	Example: [ (getPos player), 500 ] call f_fnc_createGridMarkers;
+	Example: [ (getPos player), 500, "WEST" ] call f_fnc_createGridMarkers;
 */
+
+if (!isServer) exitWIth {};
 
 private ["_center", "_radius","_steps", "_radStep", "_pos", "_text", "_block"];
 

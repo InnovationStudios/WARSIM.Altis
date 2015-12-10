@@ -41,6 +41,9 @@ class common
 		// Time it takes (in seconds) to deploy a rally point
 		deployTime = 5;
 
+		// Territory Radius - how much territory should this generate (in meters)
+		territoryRadius = 200;
+
 		// Objects to spawn for rally points (separated by side)
 		objectClassnames_WEST[] = {"Land_TentDome_F","Flag_NATO_F"};
 		objectClassnames_EAST[] = {"Land_TentDome_F","Flag_CSAT_F"};
