@@ -26,8 +26,9 @@ class CfgFunctions
 		{
 			file = "core\rally";
 			class createRallyPoint {};
+			class waitForRally {};
 		};
-		
+
 		class player
 		{
 			file = "core\player";
