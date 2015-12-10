@@ -39,7 +39,7 @@ class common
 	class rally
 	{
 		// Time it takes (in seconds) to deploy a rally point
-		deployTime = 10;
+		deployTime = 5;
 
 		// Objects to spawn for rally points (separated by side)
 		objectClassnames_WEST[] = {"Land_TentDome_F","Flag_NATO_F"};
