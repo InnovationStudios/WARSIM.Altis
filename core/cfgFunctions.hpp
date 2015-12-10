@@ -21,6 +21,13 @@ class CfgFunctions
 			class playerExists {};
 			class buildVarsFromConfig {};
 		};
+
+		class rally
+		{
+			file = "core\rally";
+			class createRallyPoint {};
+		};
+		
 		class player
 		{
 			file = "core\player";
