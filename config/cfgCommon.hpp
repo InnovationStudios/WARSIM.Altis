@@ -25,6 +25,8 @@ class common
 			class players { filename = "tblPlayers"; };
 			class objects { filename = "tblObjects"; };
 			class markers { filename = "tblMarkers"; };
+			class grid { filename = "tblGrid"; };
+			class rally { filename = "tblRally"; };
 		};
 	};
 
