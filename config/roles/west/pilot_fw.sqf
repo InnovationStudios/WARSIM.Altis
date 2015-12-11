@@ -1,0 +1,27 @@
+this = _this select 0;
+if (!local this) exitWith {};
+
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+this forceAddUniform "U_B_PilotCoveralls";
+for "_i" from 1 to 2 do {this addItemToUniform "FirstAidKit";};
+this addItemToUniform "B_IR_Grenade";
+for "_i" from 1 to 2 do {this addItemToUniform "Chemlight_blue";};
+for "_i" from 1 to 2 do {this addItemToUniform "SmokeShellBlue";};
+for "_i" from 1 to 4 do {this addItemToUniform "16Rnd_9x21_Mag";};
+this addBackpack "B_Parachute";
+this addHeadgear "H_PilotHelmetFighter_B";
+this addWeapon "hgun_P07_F";
+this addWeapon "Binocular";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "ItemRadio";
+this linkItem "ItemGPS";
+this linkItem "NVGoggles";

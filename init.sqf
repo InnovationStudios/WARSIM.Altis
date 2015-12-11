@@ -4,6 +4,8 @@ if (isServer || isDedicated) then {
 	call f_fnc_validateDatabase;
 	//call f_fnc_drawStaticBases;
 	//call f_fnc_spawnGridHandler;
+
+	[] execVM "comps\startbase_west.sqf";
 };
 
 // Client Execution

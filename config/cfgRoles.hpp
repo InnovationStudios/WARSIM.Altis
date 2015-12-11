@@ -1,8 +1,7 @@
 /*
 	Notes:
 		- Do not delete the default classes (you can change the attributes, just not the classname)
-		- Each role class much have a unique name
-		- allowedLoadouts[] contains an array of classnames referencing CfgLoadouts
+		- Each role class much have a unique classname
 */
 
 class ROLES
@@ -22,6 +21,13 @@ class ROLES
 			minXPRequired = 0;
 			description = "config\roles\west\medic.html";
 			loadout = "config\roles\west\medic.sqf";
+		};
+		class MACHINEGUNNER
+		{
+			name = "Machinegunner";
+			minXPRequired = 0;
+			description = "config\roles\west\machinegunner.html";
+			loadout = "config\roles\west\machinegunner.sqf";
 		};
 		class ENGINEER
 		{
