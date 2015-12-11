@@ -14,12 +14,14 @@ if (isServer || isDedicated) then {
 	[_unit, "players", "direction", (getDir _unit)] call f_fnc_dbWrite;
 	[_unit, "players", "loadout", _loadout] call f_fnc_dbWrite;
 	[_unit, "players", "xp", _startXP] call f_fnc_dbWrite;
+	[_unit, "players", "role", "DEFAULT"] call f_fnc_dbWrite;
 
 	_unit setVariable ["PERS_ID", _unitFileName, true];
 	_unit setVariable ["PERS_POSITION", ((getPos _unit) call f_fnc_positionToString), true];
 	_unit setVariable ["PERS_DIRECTION", (getDir _unit), true];
 	_unit setVariable ["PERS_LOADOUT", _loadout, true];
 	_unit setVariable ["PERS_XP", _startXP, true];
+	_unit setVariable ["PERS_ROLE", "DEFAULT", true];
 } else {
 	[_this, "f_fnc_createPlayer", false, false, true] call BIS_fnc_MP;
 };

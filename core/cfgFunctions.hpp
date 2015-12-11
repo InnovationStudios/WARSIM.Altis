@@ -36,6 +36,7 @@ class CfgFunctions
 			file = "core\player";
 			class roleProps {};
 			class showRoles {};
+			class showArmory {};
 			class assignRole {};
 			class validatePlayer {};
 			class createPlayer {};

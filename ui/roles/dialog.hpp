@@ -2,7 +2,7 @@ class GUI_Roles
 {
 	idd = 2000;
 	movingenable = false;
-	
+
 	onLoad = "null = _this execVM 'ui\roles\init.sqf'";
 
 	class controls
@@ -75,7 +75,7 @@ class GUI_Roles
 			y = 0.72 * safezoneH + safezoneY;
 			w = 0.237247 * safezoneW;
 			h = 0.022 * safezoneH;
-			action = "null = _this execVM 'ui\roles\assignRole.sqf'";
+			action = "null = [] execVM 'ui\roles\assignRole.sqf'";
 		};
 	};
 };

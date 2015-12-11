@@ -11,25 +11,15 @@ _loadoutList = _display displayCtrl 1501;
 _chooseRoleBtn = _display displayCtrl 1602;
 
 _item = _control lbData _index;
-_roles = (missionConfigFile >> "CfgWarsim" >> "roles" >> (toLower (str (side _unit))) >> _item) call f_fnc_classProperties;
 
-_loadouts = _roles select 3 select 1;
-lbClear _loadoutList;
-_loadoutList lbSetCurSel -1;
-
-{
-	_loadout = (missionConfigFile >> "CfgWarsim" >> "loadouts" >> (toLower (str (side _unit))) >> (format ["item%1", _x])) call f_fnc_classProperties;
-	_index = _loadoutList lbAdd (_loadout select 0 select 1);
-	_loadoutList lbSetData [_index, (_loadout select 1 select 1)];
-} count _loadouts;
-
-_content htmlLoad (_roles select 1 select 1);
+_htmlFile = (missionConfigFile >> "CfgWarsim" >> "roles" >> (str (side _unit)) >> _item >> "description") call BIS_fnc_getCfgData;
+_content htmlLoad _htmlFile;
 if (!ctrlHTMLLoaded _content) then {
-	hint "Loading failed!";
+	systemChat (format ["%1 - LOADING FAILED", _htmlFile]);
 };
 
 _unitXP = _unit getVariable ["XP", 0];
-_roleXP = _roles select 2 select 1;
+_roleXP = (missionConfigFile >> "CfgWarsim" >> "roles" >> (str (side _unit)) >> _item >> "minXPRequired") call BIS_fnc_getCfgData;
 _diffXP = _roleXP - _unitXP;
 
 if (_diffXP > 0) then {

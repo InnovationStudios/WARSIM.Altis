@@ -1,128 +1,82 @@
-class roles
+/*
+	Notes:
+		- Do not delete the default classes (you can change the attributes, just not the classname)
+		- Each role class much have a unique name
+		- allowedLoadouts[] contains an array of classnames referencing CfgLoadouts
+*/
+
+class ROLES
 {
-	items = 3;
-	class west
+	class WEST
 	{
-		items = 5;
-		class item1
+		class DEFAULT
+		{
+			name = "Rifleman";
+			minXPRequired = 0;
+			description = "config\roles\west\rifleman.html";
+			loadout = "config\roles\west\rifleman.sqf";
+		};
+		class MEDIC
 		{
 			name = "Medic";
-			filename = "config\roles\west\medic.html";
 			minXPRequired = 0;
-			allowedLoadouts[] = {1,2,5};
+			description = "config\roles\west\medic.html";
+			loadout = "config\roles\west\medic.sqf";
 		};
-		class item2
+		class ENGINEER
 		{
 			name = "Engineer";
-			filename = "config\roles\west\engineer.html";
 			minXPRequired = 1500;
-			allowedLoadouts[] = {1,3,5};
+			description = "config\roles\west\engineer.html";
+			loadout = "config\roles\west\engineer.sqf";
 		};
-		class item3
+		class MARKSMAN
 		{
 			name = "Marksman";
-			filename = "config\roles\west\marksman.html";
 			minXPRequired = 3000;
-			allowedLoadouts[] = {1,4,5};
+			description = "config\roles\west\marksman.html";
+			loadout = "config\roles\west\marksman.sqf";
 		};
-		class item4
+		class PILOT_R
 		{
 			name = "Pilot (Rotary)";
-			filename = "config\roles\west\pilot_rotary.html";
 			minXPRequired = 10000;
-			allowedLoadouts[] = {1,5,6};
+			description = "config\roles\west\pilot_r.html";
+			loadout = "config\roles\west\pilot_r.sqf";
 		};
-		class item5
+		class PILOT_FW
 		{
 			name = "Pilot (Fixed Wing)";
-			filename = "config\roles\west\pilot_fixedwing.html";
 			minXPRequired = 15000;
-			allowedLoadouts[] = {1,5,7};
+			description = "config\roles\west\pilot_fw.html";
+			loadout = "config\roles\west\pilot_fw.sqf";
 		};
-		class item6
+		class SNIPER
 		{
 			name = "Sniper";
-			filename = "config\roles\west\sniper.html";
 			minXPRequired = 20000;
-			allowedLoadouts[] = {1,4,8};
+			description = "config\roles\west\sniper.html";
+			loadout = "config\roles\west\sniper.sqf";
 		};
-		class item7
+		class SPOTTER
 		{
 			name = "Spotter";
-			filename = "config\roles\west\spotter.html";
 			minXPRequired = 20000;
-			allowedLoadouts[] = {1,4,9};
+			description = "config\roles\west\spotter.html";
+			loadout = "config\roles\west\spotter.sqf";
 		};
-		class item8
+		class UAV_OPERATOR
 		{
 			name = "UAV Operator";
-			filename = "config\roles\west\uav.html";
 			minXPRequired = 25000;
-			allowedLoadouts[] = {1,5,10};
+			description = "config\roles\west\uav.html";
+			loadout = "config\roles\west\uav.sqf";
 		};
 	};
-	class east
+	class EAST
 	{
-		items = 4;
-		class item1
-		{
-			name = "Medic";
-			filename = "config\roles\west\medic.html";
-			minXPRequired = 0;
-			allowedLoadouts[] = {1,2,5};
-		};
-		class item2
-		{
-			name = "Engineer";
-			filename = "config\roles\west\medic.html";
-			minXPRequired = 2;
-			allowedLoadouts[] = {1,3,5};
-		};
-		class item3
-		{
-			name = "Marksman";
-			filename = "config\roles\west\medic.html";
-			minXPRequired = 3;
-			allowedLoadouts[] = {1,4,5};
-		};
-		class item4
-		{
-			name = "Pilot";
-			filename = "config\roles\west\medic.html";
-			minXPRequired = 5;
-			allowedLoadouts[] = {1,5,6};
-		};
 	};
-	class guer
+	class GUER
 	{
-		items = 4;
-		class item1
-		{
-			name = "Medic";
-			filename = "config\roles\west\medic.html";
-			minXPRequired = 0;
-			allowedLoadouts[] = {1,2,5};
-		};
-		class item2
-		{
-			name = "Engineer";
-			filename = "config\roles\west\medic.html";
-			minXPRequired = 2;
-			allowedLoadouts[] = {1,3,5};
-		};
-		class item3
-		{
-			name = "Marksman";
-			filename = "config\roles\west\medic.html";
-			minXPRequired = 3;
-			allowedLoadouts[] = {1,4,5};
-		};
-		class item4
-		{
-			name = "Pilot";
-			filename = "config\roles\west\medic.html";
-			minXPRequired = 5;
-			allowedLoadouts[] = {1,5,6};
-		};
 	};
 };
