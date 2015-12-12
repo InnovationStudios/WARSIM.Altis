@@ -7,7 +7,6 @@ _control = _this select 0;
 _index = _this select 1;
 _unit = player;
 _content = _display displayCtrl 2202;
-_loadoutList = _display displayCtrl 1501;
 _chooseRoleBtn = _display displayCtrl 1602;
 
 _item = _control lbData _index;

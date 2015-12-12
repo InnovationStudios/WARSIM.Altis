@@ -12,8 +12,9 @@ class ROLES
 		{
 			name = "Rifleman";
 			minXPRequired = 0;
-			description = "config\roles\west\rifleman.html";
+			description = "At the forefront of the battlefield, medics provide every soldier with the means to get back in the fight. Your main duties are to heal and revive fallen comrades.";
 			loadout = "config\roles\west\rifleman.sqf";
+			features[] = {"Heal players to 100% health","Revive players 200% faster","Extra 250 XP per revive"};
 		};
 		class MEDIC
 		{

@@ -59,14 +59,6 @@ class GUI_Roles
 			w = 0.237247 * safezoneW;
 			h = 0.33 * safezoneH;
 		};
-		class GUI_Loadouts: RscListbox
-		{
-			idc = 1501;
-			x = 0.463897 * safezoneW + safezoneX;
-			y = 0.599 * safezoneH + safezoneY;
-			w = 0.237247 * safezoneW;
-			h = 0.11 * safezoneH;
-		};
 		class GUI_BtnAssign: RscButton
 		{
 			idc = 1602;

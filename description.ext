@@ -1,6 +1,6 @@
 author = "Kingsley";
 OnLoadName = "WARSIM";
-OnLoadMission = "Three factions fight to control territory across the island of Altis.";
+OnLoadMission = "NATO, CSAT and the AAF fight to control territory across the island of Altis.";
 //loadScreen = "splash.paa";
 disabledAI = 1;
 
@@ -25,9 +25,9 @@ wreckRemovalMaxTime = 300;
 
 class Header
 {
-	gameType = Coop;
+	gameType = CTI;
 	minPlayers = 1;
-	maxPlayers = 60;
+	maxPlayers = 120;
 };
 
 #include "ui\include.hpp"

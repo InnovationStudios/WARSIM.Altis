@@ -5,7 +5,6 @@ disableSerialization;
 _display = findDisplay 2000;
 _unit = player;
 _roleList = _display displayCtrl 1500;
-_loadoutList = _display displayCtrl 1501;
 _chooseRoleBtn = _display displayCtrl 1602;
 
 _roleIndex = lbCurSel _roleList;
