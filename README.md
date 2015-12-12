@@ -4,7 +4,7 @@
 
 <p align="center">
 	<a href="https://github.com/jameslkingsley/WARSIM.Altis">
-    	<img src="https://img.shields.io/badge/version-1.3.3-blue.svg">
+    	<img src="https://img.shields.io/badge/version-1.3.4-blue.svg">
 	</a>
     <a href="https://forums.bistudio.com/topic/183392-warsim-persistent-military-careers-alpha/">
         <img src="https://img.shields.io/badge/forum-thread-lightgrey.svg">
